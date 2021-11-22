@@ -13,7 +13,8 @@ exports.seed = function (knex) {
           sets: 10,
           weight: -1,
           trainingNotes: "iso because -1",
-          completed: false
+          completed: false,
+          user_id: 1
         },
         {
           type: "Value2",
@@ -23,7 +24,8 @@ exports.seed = function (knex) {
           sets: 10,
           weight: 10,
           trainingNotes: "notes",
-          completed: false
+          completed: false,
+          user_id: 2
         },
         {
           type: "Value3",
@@ -33,8 +35,10 @@ exports.seed = function (knex) {
           sets: 10,
           weight: 30,
           trainingNotes: "notes",
-          completed: false
+          completed: false,
+          user_id: 3
         },
       ]);
     });
 };
+

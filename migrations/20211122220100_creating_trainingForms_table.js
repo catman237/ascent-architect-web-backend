@@ -1,4 +1,3 @@
-
 exports.up = function(knex) {
     return knex.schema.createTable('trainingForms', t => {
         t.increments()
@@ -10,6 +9,7 @@ exports.up = function(knex) {
         t.integer('weight')
         t.string('trainingNotes')
         t.boolean('completed')
+        t.integer('user_id').references('id').inTable("users")
         t.timestamp('created_at').defaultTo(knex.fn.now())
     })
   };
@@ -17,3 +17,5 @@ exports.up = function(knex) {
   exports.down = function(knex) {
     return knex.schema.dropTableIfExists('trainingForms')
   };
+
+
