@@ -16,3 +16,17 @@ exports.up = (knex) => {
 exports.down = (knex) => {
   return knex.schema.dropTableIfExists("users");
 };
+
+
+//test user seed
+// "user": {
+//   "userName": "greg000",
+//   "password_digest": "test",
+//   "firstName": "greg",
+//   "lastName": "hughes",
+//   "height": 72,
+//   "apeIndex": 6,
+//   "weight": 168,
+//   "age": 27,
+//    "home": "golden"
+// }

@@ -9,7 +9,7 @@ exports.up = function(knex) {
         t.integer('weight')
         t.string('trainingNotes')
         t.boolean('completed')
-        t.integer('user_id').references('id').inTable("users")
+        t.integer('user_id').references('id').inTable("users").onDelete("CASCADE").onUpdate("CASCADE")
         t.timestamp('created_at').defaultTo(knex.fn.now())
     })
   };
